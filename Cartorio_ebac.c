@@ -124,29 +124,40 @@ int main()
     {
 	int opcao=0; //definindo variaveis
 	int laco=1;
+	char senhadigitada[10];
+	int comparacao;
 	
-	for(laco=1;laco=1;)
-	{	 
+	printf("### Cartório da EBAC###\n\n");
+	printf("login de administrador\n\ndigite a sua senha: ");
+	scanf("%s", senhadigitada);
 	
-	    system("cls");
+	comparacao = strcmp(senhadigitada, "admin");
 	
-	    setlocale(LC_ALL, "Portuguese"); //definindo a linguagem
+	if(comparacao == 0)
+	{
+	     system("cls");
+	     for(laco=1;laco=1;)
+	     {
 	
-	    printf("### Cartório da EBAC###\n\n"); //começo do menu 
-	    printf("Escola a opçao desejada do menu:\n\n");
-	    printf("\t1 - registrar nomes\n");
-	    printf("\t2 - consultar nomes\n");
-	    printf("\t3 - deletar nomes\n\n"); 
-	    printf("\t4 - sair do sistema\n\n");
-	    printf("opção:"); //fim do menu
+	     system("cls");
+	
+	     setlocale(LC_ALL, "Portuguese"); //definindo a linguagem
+	
+	     printf("### Cartório da EBAC###\n\n"); //começo do menu 
+	     printf("Escola a opçao desejada do menu:\n\n");
+	     printf("\t1 - registrar nomes\n");
+	     printf("\t2 - consultar nomes\n");
+	     printf("\t3 - deletar nomes\n\n"); 
+	     printf("\t4 - sair do sistema\n\n");
+	     printf("opção:"); //fim do menu
   
-        scanf("%d", &opcao);  //armazenando a escolha do usuário 
+         scanf("%d", &opcao);  //armazenando a escolha do usuário 
         
-        system("cls"); //responsavel por limpar a tela
+         system("cls"); //responsavel por limpar a tela
     
     
-        switch(opcao) //inicio da seleção
-        {	             
+         switch(opcao) //inicio da seleção
+         {	             
         	case 1:
         	registro(); //chamada de funções
         	break;
@@ -168,8 +179,10 @@ int main()
 		    printf("Está opção não está disponivel!!\n");
 	        system("pause");
 	        break;
-	   } //fim da seleção
+	     } //fim da seleção
 	    
-	}
- 
- }   
+	   }
+    }
+    else 
+      printf("senha incorreta!\n");
+}    
